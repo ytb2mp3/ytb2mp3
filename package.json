@@ -1,0 +1,43 @@
+{
+  "name": "ytb2mp3",
+  "version": "0.1.0",
+  "description": "Convert YouTube videos to mp3 files via the command-line",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node bin/index.js",
+    "publish-please": "publish-please",
+    "prepublish": "publish-please guard"
+  },
+  "bin": {
+    "ytb2mp3": "bin/index"
+  },
+  "keywords": [
+    "youtube",
+    "video",
+    "convert",
+    "mp3",
+    "audio",
+    "converter"
+  ],
+  "author": "ytb2mp3",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ytb2mp3/ytb2mp3/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ytb2mp3/ytb2mp3.git"
+  },
+  "homepage": "https://github.com/ytb2mp3/ytb2mp3",
+  "devDependencies": {
+    "publish-please": "~2.3.1"
+  },
+  "dependencies": {
+    "cli-progress": "^1.6.0",
+    "configstore": "^3.1.1",
+    "home-dir": "^1.0.0",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "youtube-mp3-downloader": "^0.5.1"
+  }
+}
