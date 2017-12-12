@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run": "node bin/index.js",
-    "publish-please": "publish-please"
+    "publish-please": "publish-please",
+    "raw-publish": "npm publish --userconfig ~/.npmrc-ytb2mp3"
   },
   "bin": {
     "ytb2mp3": "bin/index.js"
