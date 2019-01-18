@@ -38,6 +38,7 @@
     "home-dir": "^1.0.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
-    "youtube-mp3-downloader": "^0.5.3"
+    "youtube-mp3-downloader": "^0.5.3",
+    "ytdl-core": "^0.29.1"
   }
 }
