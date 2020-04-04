@@ -58,7 +58,6 @@ if (process.stdin.isTTY) {
 }
 
 function handler() {
-
     if (argv.hasOwnProperty("help")) {
         console.log("ytb2mp3 usage:");
         console.log("--------------------------");
@@ -88,7 +87,6 @@ function handler() {
             console.error("Please just specify ONE argument, the YouTube video URL... Exiting!");
             process.exit(-1);
         } else {
-
             // Check for default output path
             if (!conf.hasOwnProperty("outputPath")) {
                 // Set default
@@ -120,30 +118,25 @@ function handler() {
                 console.log("Couldn't find a valid video id from the given URL. Exiting!");
                 process.exit(-1);
             } else {
-
                 // Set videoId
                 videoConfig.videoId = videoId;
-
+                console.log(conf.get("outputPath"))
                 // Create output path if it doesn"t exist yet
-                mkdirp(conf.get("outputPath"), function (err) {
-                    if (err) {
-                        console.error(err);
-                        process.exit(-1);
-                    } else {
-                        // Download video and create MP3
-                        dl.getMP3(videoConfig, function(err,res){
-                            if(err) {
-                                console.error(err);
-                                process.exit(-1);
-                            } else {
-                                console.log("Song was downloaded: " + res.file);
-                            }
-                        });
-                    }
+                mkdirp(conf.get("outputPath")).then(() => {
+                    // Download video and create MP3
+                    dl.getMP3(videoConfig, function(err,res){
+                        if(err) {
+                            console.error(err);
+                            process.exit(-1);
+                        } else {
+                            console.log("Song was downloaded: " + res.file);
+                        }
+                    });
+                }).catch(err => {
+                    console.error(err);
+                    process.exit(-1);
                 });
-
             }
-
         }
     }
 }
