@@ -1,6 +1,6 @@
 {
   "name": "ytb2mp3",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Convert YouTube videos to mp3 files via the command-line",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
