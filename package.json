@@ -30,7 +30,7 @@
   "devDependencies": {},
   "dependencies": {
     "cli-progress": "^3.9.1",
-    "configstore": "^5.0.1",
+    "configstore": "^6.0.0",
     "home-dir": "^1.0.0",
     "minimist": "^1.2.5",
     "mkdirp": "^1.0.4",
